@@ -1,0 +1,17 @@
+<package>
+  <description brief="baxter_faces">
+
+    Face images to use with Baxter robot
+
+    Gerty icons were taken from
+    http://www.gavinrothery.com/garty-robotic-assist/
+
+  </description>
+  <author>Mikhail Medvedev</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/baxter_faces</url>
+
+</package>
+
+
