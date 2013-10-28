@@ -11,7 +11,7 @@
   <license>BSD</license>
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/baxter_faces</url>
+  <depend package="rospy"/>
+  <depend package="sensor_msgs"/>
 
 </package>
-
-
