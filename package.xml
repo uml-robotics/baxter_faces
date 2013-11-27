@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package>
+  <name>baxter_faces</name>
+  <version>0.1.0</version>
+  <description>
+
+    Face images to use with Baxter robot
+
+    Gerty icons were taken from
+    http://www.gavinrothery.com/garty-robotic-assist/
+
+    </description>
+
+  <maintainer email="mmedvede@cs.uml.edu">Mikhail Medvedev</maintainer>
+  <license>BSD</license>
+
+  <author email="mmedvede@cs.uml.edu">Mikhail Medvedev</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>rospy</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+
+</package>
