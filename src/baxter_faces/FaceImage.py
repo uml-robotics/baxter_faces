@@ -17,6 +17,7 @@ class FaceImage(object):
             'confused': self._get_image('gerty_confused.png'),
             'unhappy': self._get_image('gerty_unhappy.png'),
             'dead': self._get_image('gerty_dead.png'),
+            'big_lemongrab': self._get_image('big_lemongrab.png'),
         }
         self.current_image = ''
         self.pub = rospy.Publisher(
