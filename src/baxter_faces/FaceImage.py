@@ -20,7 +20,7 @@ class FaceImage(object):
         }
         self.current_image = ''
         self.pub = rospy.Publisher(
-            '/sdk/xdisplay', sensor_msgs.msg.Image, latch=True)
+            '/robot/xdisplay', sensor_msgs.msg.Image, latch=True)
         self.set_image('indifferent')
 
     def _get_image(self, path):
