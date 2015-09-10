@@ -2,13 +2,13 @@ import roslib
 roslib.load_manifest('baxter_faces')
 import rospy
 
-import cv
 import cv_bridge
 import sensor_msgs.msg
 
 
 class FaceImage(object):
     def __init__(self):
+        self.bridge=cv_bridge.CvBridge()
         self.images = {
             'indifferent': self._get_image('gerty_indifferent.png'),
             'happy': self._get_image('gerty_happy.png'),
@@ -30,9 +30,15 @@ class FaceImage(object):
         self.set_image('indifferent')
 
     def _get_image(self, path):
-        img = cv.LoadImage(
-            roslib.packages.get_pkg_dir('baxter_faces') + '/img/' + path)
-        return cv_bridge.CvBridge().cv_to_imgmsg(img)
+        if hasattr(self.bridge, 'cv_to_imgmsg'):
+            import cv
+            img = cv.LoadImage(
+                roslib.packages.get_pkg_dir('baxter_faces') + '/img/' + path)
+            return self.bridge.cv_to_imgmsg(img)
+        else:
+            import cv2
+            img = cv2.imread(roslib.packages.get_pkg_dir('baxter_faces') + '/img/' + path)
+            return self.bridge.cv2_to_imgmsg(img)
 
     def set_image(self, img_name):
         if self.current_image != img_name:
