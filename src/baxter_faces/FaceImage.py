@@ -23,6 +23,8 @@ class FaceImage(object):
             'sad': self._get_image('gerty_sad.png'),
             'dead': self._get_image('gerty_dead.png'),
             'big_lemongrab': self._get_image('big_lemongrab.png'),
+            'logo': self._get_image('UMass-Lowell-logo.png'),
+            'dan': self._get_image('dan.png')
         }
         self.current_image = ''
         self.pub = rospy.Publisher(
